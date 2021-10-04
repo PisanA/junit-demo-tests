@@ -8,12 +8,12 @@ import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
 
 public class MainTest {
   // Interact with systemInMock to provide scanner input values.
-	@Rule
-	public final TextFromStandardInputStream systemInMock = emptyStandardInputStream();
+  @Rule
+  public final TextFromStandardInputStream systemInMock = emptyStandardInputStream();
   
   // Interact with systemOutRule to read from System.out.prints.
   @Rule
-	public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
+  public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
   
   // Tests that the method input() returns the correct integer.
   @Test
