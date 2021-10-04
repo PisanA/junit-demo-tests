@@ -18,7 +18,7 @@ class Main {
     try {
       Scanner scan = new Scanner(new File("text.txt")); // text.txt is in the roor folder
     } catch (FileNotFoundException e) {
-      System.out.println("Error opening the file " + filename);
+      System.out.println("Error opening the file!");
     }
   }
   
