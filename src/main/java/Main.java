@@ -2,6 +2,7 @@
 // that the tests are working properly. This means that the tests repository will normally be private.
 
 import java.util.*;
+import java.io.*;
 
 class Main {
   public static int input() {
@@ -13,7 +14,17 @@ class Main {
     System.out.println("JUnit is so cool!");
   }
   
+  public static void openFile() {
+    try {
+      Scanner scan = new Scanner(new File("text.txt")); // text.txt is in the roor folder
+    } catch (FileNotFoundException e) {
+      System.out.println("Error opening the file " + filename);
+    }
+  }
+  
   public static void main(String[] args) {
     System.out.println("Hello world!");
   }
+  
+  
 }
