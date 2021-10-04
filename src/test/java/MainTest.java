@@ -5,6 +5,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.contrib.java.lang.system.SystemOutRule;
 import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
+import org.junit.rules.Timeout;
 
 public class MainTest {
   // Interact with systemInMock to provide scanner input values.
@@ -14,6 +15,10 @@ public class MainTest {
   // Interact with systemOutRule to read from System.out.prints.
   @Rule
   public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
+  
+  // Sets a timeout to stop testing when it reaches a threashold to avoid infinite loops or unexpected scanner input.
+  @Rule
+  public Timeout globalTimeout = new Timeout(5000);
   
   // Tests that the method input() returns the correct integer.
   @Test
